@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수피아 팬션 예약하기</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#clickme").click(function(){
+      $("#clickme").html("예약되었습니다.");
+    });
+  });
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+0w",
+          changeMonth: true,
+          numberOfMonths: 3
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+0w",
+        changeMonth: true,
+        numberOfMonths: 3
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+
+      });
+
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+
+      return date;
+    }
+  } );
+  </script>
+  <style type="text/css">
+  #pic{
+    float: top;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  </style>
+</head>
+<body>
+
+  <div data-role="header" data-theme="a" >
+        <a href="#main" data-icon="home" data-rel="back" class="ui-btn-left">Home</a>
+        <h1>팬션 예약하기</h1>
+      </div>
+
+
+      <div data-role="content" >
+          <img src="images/pic_pansion_main.png" alt="" id="pic">
+          <div>
+          </div>
+          <h3 align="center">예약 날짜 선택하기<h3>
+            <div>
+            <input type="text" id="from" name="from"><h4 align="center">부터</h4>
+          </div>
+          <input type="text" id="to" name="to"><h4 align="center">까지</h4><br/>
+          <div>
+            <h4 align="center">이름</h4><input type="text" id="name">
+            <h4 align="center">연락처</h4><input type="text" id="phone"><br/><br/>
+            </div>
+            <a href = "#" id="clickme" data-rel="input" class="ui-btn" >예약하기</a>
+          </div>
+          <div data-role="footer" data-theme="b">
+              <h2>수피아 팬션</h2>
+          </div>
+          </div>
+
+</body>
+</html>

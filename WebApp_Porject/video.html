@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <!-- Video JS 설정 추가 -->
+    <link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.5/video.js"></script>
+
+    <!-- 링크 클릭 시 Full Screen을 유지하게 함 -->
+    <script type="text/javascript" src="keep_full_screen.js"></script>
+
+	<style type="text/css">
+		#video_canvas {
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: auto;
+			width: 500px;
+			height: 500px;
+		}
+		.content_style {
+			padding-right: 0px;
+			padding-left:  0px;
+		}
+    </style>
+</head>
+
+<body>
+<div data-role="page" id="video_value" >
+    <div data-role="header" data-theme="a" >
+        <a href="index.html" rel="external" data-rel="back" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+        <h1>편안한 휴양지</h1>
+    </div>
+  	<div data-role="content" class="content_style" >
+      <div id="video_canvas">
+                 <div>
+                    <video class="video-js vjs-default-skin" width="500px" height="500px" controls preload="auto" poster="images/most_value.jpg" data-setup="{}">
+                      <source src="video/test.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                    </video>
+                    <p class="vjs-no-video"><strong>비디오 다운로드:</strong>
+                      <a href="video/virtual_university.mp4" target="_blank">MP4</a>
+                      <br>
+                    </p>
+                 </div> <!-- video-js Box 끝-->
+            </div> <!-- video canvas 끝-->
+  	</div>
+  	<div data-role="footer" data-theme="a">
+ 		<h2>수피아 팬션 홍보 동영상</h2>
+  	</div>
+</div>
+</body>
+</html>
