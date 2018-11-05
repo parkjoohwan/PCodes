@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#747474">
+
+    <!-- Activity Layout XML -->
+    <!-- @author croute -->
+    <!-- @since 2011.03.08 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gv_calendar_activity_b_last"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/arrow_left"/>
+
+        <TextView
+            android:id="@+id/gv_calendar_activity_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2011년 몇월"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/gv_calendar_activity_b_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/arrow_right"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_calendar_activity_gv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:listSelector="@drawable/gridview_selector"
+        android:numColumns="7"
+        android:stretchMode="columnWidth"
+        android:layout_weight="1">
+
+    </GridView>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="달력의 날짜를 클릭하면 운동 목록이 나옵니다." />
+
+</LinearLayout>

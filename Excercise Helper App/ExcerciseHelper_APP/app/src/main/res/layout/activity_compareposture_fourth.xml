@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.55"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="#747474"
+            android:text="자세비교결과" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:gravity="center|bottom"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:text="[ 트레이너 자세 ]" />
+
+        <ImageView
+            android:id="@+id/imageView_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:gravity="center|bottom"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:text="[ 내 자세 ]" />
+
+        <ImageView
+            android:id="@+id/imageView_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            app:srcCompat="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:gravity="center|bottom"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:text="[ 고쳐야할 점 ]" />
+
+        <TextView
+            android:id="@+id/textView_coment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.45"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="left|top"
+        android:background="@drawable/left"
+        android:onClick="onClick_left"/>
+
+    <Button
+        android:id="@+id/button_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right|top"
+        android:background="@drawable/right"
+        android:onClick="onClick_right"/>
+</FrameLayout>

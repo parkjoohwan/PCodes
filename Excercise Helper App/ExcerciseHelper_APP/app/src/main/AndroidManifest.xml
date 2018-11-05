@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aict.myapplication">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:icon="@mipmap/logo"
+        android:label="ECA"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity">
+        </activity>
+
+        <activity android:name=".LoginActivity">
+        </activity>
+
+        <activity android:name=".SignupActivity">
+        </activity>
+
+        <activity android:name=".ExerciseplanActivity">
+        </activity>
+
+        <activity android:name=".ExerciseplanActivity_second">
+        </activity>
+
+        <activity android:name=".UserinfoActivity">
+        </activity>
+
+        <activity android:name=".VideoActivity">
+        </activity>
+
+        <activity android:name=".ComparePosture">
+        </activity>
+
+        <activity android:name=".ComparePosture_second">
+        </activity>
+
+        <activity android:name=".ComparePosture_third"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity android:name=".ComparePosture_fourth">
+        </activity>
+
+        <activity android:name=".Camera_capture"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity android:name=".FaceTracking"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity
+            android:name=".ComparePosture_communication"
+            android:launchMode="singleTask"
+            >
+
+        </activity>
+
+        <activity android:name=".ComparePosture_explain">
+
+        </activity>
+
+        <activity android:name=".ComparePosture_explaintwo">
+
+        </activity>
+
+
+    </application>
+
+</manifest>
